@@ -1,0 +1,14 @@
+#inputField{
+    border: none;
+}
+img{
+    height:9em;
+    width:9em;
+}
+.textAlign{
+    margin-top: 2em;
+    font-size: large;
+}
+th{
+    font-size: x-large;
+}
