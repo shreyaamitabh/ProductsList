@@ -1,50 +1,7 @@
 
-#navImage{
-    height:5em;
-    width:5em;
-    position: absolute;
-    top:0;
-}
-#userNav{
-    border-radius: 50%;
-    height:4em;
-    width:4em;
-    position: absolute;
-    top:0;
-    right:0;
-}
-
-  #secNav{
-   width:80%;
-   margin:auto;
-   background-color: aliceblue;
-    margin-top:8em;
-   
-  }
 #firstNav{
     margin-bottom: 0;
     background-color:#0062cc;
     height:6em;
     position: relative;
-}
-#products{
-    color:darkgrey;
-    position: absolute;
-    top:50%;
-    margin-left: 12em;
-    font-size: large;
-}
-#dropdown{
-    position: absolute;
-   top:100%;
-   margin-left:57em;
-    color:darkgray;
-    font-size: large;
-}
-.drop{
-    position: absolute;
-    top:100%;
-    margin-left:57em;
-     color:darkgray;
-     font-size: large;  
 }
