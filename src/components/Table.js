@@ -28,7 +28,7 @@ class Table extends React.Component {
     render(){
         const{items, action}= this.props;
         return(
-            <BTable  bordered hover >
+            <BTable  id="table" hover >
                 <thead>
           <tr>
             <th>Image</th>

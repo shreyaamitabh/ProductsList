@@ -1,8 +1,9 @@
 import React , { Fragment} from "react";
 import './Header.css'
-import Button from 'react-bootstrap/Button'
-import Jumbotron from 'react-bootstrap/Jumbotron'
-import Container from 'react-bootstrap/Container'
+import Navbar from 'react-bootstrap/Navbar'
+import Nav from 'react-bootstrap/Nav'
+import NavDropdown from 'react-bootstrap/NavDropdown'
+
 class Header extends React.Component{
     constructor(props)
     {
@@ -13,17 +14,29 @@ class Header extends React.Component{
         const {action}= this.props;
         return(
             <Fragment>
-                <Jumbotron id="jumboContainer" fluid>
-                    <Container>
-                        <h1>Products List</h1>
-                <div class="d-flex justify-content-around mt-5">
-                 <Button  variant="info" onClick={()=>action("")}>All Categories</Button>
-                 <Button  variant="info" onClick={()=>action("Milk")}>Milk</Button>
-                 <Button variant="info" onClick={()=>action("Biscuit")}>Biscuit</Button>
-                 <Button variant="info" onClick={()=>action("Rice")}>Rice</Button>
-                 </div>
-                    </Container>
-                </Jumbotron>
+
+                <Navbar id="firstNav" bg="light" fixed="top" >
+                    <img id="navImage" src="https://thumbs.dreamstime.com/z/grocery-store-delivery-company-s-logo-items-vegetables-home-icon-vector-design-template-167341513.jpg"/>
+                    <div className="topnav-right">
+                    <img  src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcR2GQC84QrrCIBfaN1krHyjqGtNx02bji5kCQaO6iIBqYAjX9Pl&usqp=CAU" id="userNav" />
+                    </div>
+                    <Nav.Link id="products">Products</Nav.Link>
+                    <NavDropdown title="Categories" id="dropdown"  >
+                <NavDropdown.Item  class="drop" onClick={()=>action("")}>All Categories</NavDropdown.Item>
+                <NavDropdown.Item class="drop" onClick={()=>action("Milk")}>Milk</NavDropdown.Item>
+                <NavDropdown.Item class="drop" onClick={()=>action("Biscuit")}>Biscuit</NavDropdown.Item>
+                <NavDropdown.Item class="drop" onClick={()=>action("Rice")}>Rice</NavDropdown.Item>
+               </NavDropdown>
+                </Navbar>
+                {/* <Navbar bg="light" id="secNav" fixed >
+                <Nav.Link id="products">Products</Nav.Link>
+                <NavDropdown title="Categories" class="drop" >
+                <NavDropdown.Item  class="drop" onClick={()=>action("")}>All Categories</NavDropdown.Item>
+                <NavDropdown.Item class="drop" onClick={()=>action("Milk")}>Milk</NavDropdown.Item>
+                <NavDropdown.Item class="drop" onClick={()=>action("Biscuit")}>Biscuit</NavDropdown.Item>
+                <NavDropdown.Item class="drop" onClick={()=>action("Rice")}>Rice</NavDropdown.Item>
+            </NavDropdown>
+                </Navbar> */}
             </Fragment>
         )
     }

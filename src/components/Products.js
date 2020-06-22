@@ -1,6 +1,8 @@
 import React , { Fragment} from "react";
 import Table from './Table'
 import Header from './Header'
+import Button from 'react-bootstrap/Button'
+import './Products.css'
 class Products extends React.Component {
   
     constructor(props) {
@@ -94,6 +96,7 @@ class Products extends React.Component {
             <Fragment>
                 <Header action={this.handleClick} />
                 {!this.state.change || this.state.filter==="" ? <Table items={this.state.items} action={this.changeQuantity}/> : <Table items={this.state.items1} action={this.changeQuantity}/>}
+                <Button id="button" variant="primary">Dummy Button</Button>
             </Fragment>
         )
     }

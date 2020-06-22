@@ -12,3 +12,10 @@ img{
 th{
     font-size: x-large;
 }
+#table{
+    width:80%;
+    margin:auto;
+    margin-top: 4em;;
+    border: 1px solid lightgrey;
+    box-shadow: 5px 10px 8px 10px #888888;
+}
